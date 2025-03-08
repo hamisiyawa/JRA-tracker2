@@ -1,0 +1,211 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Ubuntu",  sans-serif;
+}
+
+:root {
+  --color-primary: #7d80cb; /* Primary Color */
+  --color-secondary: #5a6abb; /* Secondary Color */
+  --color-accent: #8420d8; /* Accent Color */
+  --color-accent-dark: #6b16b1;
+  --color-neutral: #75a4ce; /* Neutral Tone */
+  --default-color: #444444;
+  --surface-color: #14eb83;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  font-family: var(--default-font) !important;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    color: var(--default-color);
+    font-weight: 500;
+}
+
+.buttons{
+  background-color: var(--color-accent);
+  color: white;
+  transition: 0.3s;
+}
+
+.buttons:hover{
+background-color: var(--color-accent-dark);
+color: white;
+}
+
+.content{
+  flex: 1;
+}
+
+/* modals */
+.Project-modal-header{
+  background-color: var(--color-accent) !important;
+}
+
+.Project-modal-header h5{
+  color: white !important;
+}
+
+/* Tags navigation */
+.nav-tabs .nav-item .nav-link{
+  color: var(--default-color);
+}
+.nav-tabs .active{
+   color: var(--color-accent-dark) !important;
+   font-weight: 500;
+}
+
+/* Projects section */
+
+.search{
+  width: 80%;
+}
+
+.search input[type=text],
+.filter,
+.add-project input[type=text],
+.add-project input[type=date],
+.add-project input[type=number],
+.add-project textarea{
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 0;
+  box-shadow: none !important;
+  color: var(--default-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%) !important;
+}
+
+.search input[type=text]:focus,
+.filter:focus,
+.add-project input[type=text]:focus,
+.add-project input[type=date]:focus,
+.add-project input[type=number]:focus,
+.add-project textarea:focus
+{
+  border-color: var(--color-accent) !important;
+}
+
+.create-project-btn{
+  width: 80%;
+  text-align: right;
+}
+
+.create-btn{
+  border: 0;
+  border-radius: 0;
+  padding: 10px 30px;
+}
+
+.project-card{
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px !important;
+}
+
+.project-card .description{
+   font-size: 17px;
+   color: var(--default-color);
+}
+
+.status {
+  color: green;
+  font-weight: bold;
+}
+
+/* Authentication forms */
+.login-register{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.text-accent{
+  color: var(--color-accent) !important;
+  transition: 0.3s;
+}
+
+.text-accent:hover{
+  color: var(--color-accent-dark) !important;
+}
+
+.login-register input[type=text],
+.login-register input[type=email],
+.login-register input[type=password],
+.login-register select {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none !important;
+  border-radius: 0;
+  color: var(--default-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%) !important;
+}
+
+.login-register input[type=text]:focus,
+.login-register input[type=email]:focus,
+.login-register input[type=password]:focus,
+.login-register select:focus{
+  border-color: var(--color-accent) !important;
+} 
+
+.login-register button[type=submit] {
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+}
+
+
+/* Footer */
+footer {
+  color: var(--default-color);
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  bottom: 0;
+  width: 100%;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 500px){
+  .login-register{
+      width: 90%;
+  }
+
+  .search{
+      width: 100%;
+  }
+  
+
+  .create-project-btn{
+      width: 100%;
+  }
+
+  .social-container{
+      display: block !important;
+  }
+   
+  .social-container button{
+     width: 100%;
+     margin: 5px 0;
+  }
+
+}

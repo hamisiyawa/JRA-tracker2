@@ -1,0 +1,8 @@
+/* Navbar */
+.navbar{
+    background-color: var(--color-accent);
+  }
+  
+  .profileDropdown:hover{
+  cursor: pointer !important;
+  }

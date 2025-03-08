@@ -1,0 +1,159 @@
+
+
+/* Add project form */
+.upload-section {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.upload-section p {
+    font-size: 14px;
+    color: var(--default-color);
+}
+.upload-file{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-section:hover {
+    background-color: #f0f0f0;
+}
+
+.upload-section .file-icon{
+    font-size: 40px;
+    color: lightgray;
+    margin-bottom: 10px;
+}
+
+/* status css */
+.status.in-progress { color: orange; }
+.status.completed { color: green; }
+.status.pending { color: tomato; }
+.status.started { color: rgb(241, 180, 65); }
+
+.empty-project-list {
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.empty-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.empty-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    opacity: 0.7;
+}
+
+.empty-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Project modal */
+.add-project label{
+    font-size: 14px;
+    color: var(--default-color);
+}
+
+.add-project input.is-valid,
+.add-project textarea.is-valid {
+    background-image: none !important;
+    border: 1px solid green !important;
+    box-shadow: none !important;
+}
+
+.add-project input.is-invalid,
+.add-project textarea.is-invalid {
+    background-image: none !important;
+    border: 1px solid red !important;
+    box-shadow: none !important;
+}
+
+.popup-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1050;
+    font-weight: bold;
+    animation: fadeInOut 3s forwards;
+}
+.popup-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.popup-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* Terms and conditions page */
+.terms-container {
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .terms-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .terms-container p {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .terms-container h2 {
+    margin-top: 20px;
+    color: #444;
+  }
+  
+  .terms-container ul {
+    padding-left: 20px;
+  }
+  
+  .terms-container ul li {
+    margin: 5px 0;
+    color: #555;
+  }
+  
