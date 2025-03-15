@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStoreContext } from '../../context/StoreContext'
+import DeleteBtn from './DeleteBtn';
 
 const ProjectsList = ({ filterStatus, searchTerm }) => {
     const { projects } = useStoreContext();
@@ -21,9 +22,9 @@ const ProjectsList = ({ filterStatus, searchTerm }) => {
                 <p className='description'>{project.description}</p>
                 <p className={`status ${project.status.toLowerCase().replace(' ', '-')}`}>{project.status}</p>
                 <div className="project-actions">
-                <button className="btn btn-sm btn-primary py-2 px-3 my-2 mx-2">Update</button>
-                <button className="btn btn-sm btn-danger py-2 px-3 my-2 mx-2">Delete</button>
-                <button className="btn btn-sm btn-secondary py-2 px-3 my-2 mx-2">Details</button>
+                    <button className="btn btn-sm btn-primary py-2 px-3 my-2 mx-2">Update</button>
+                    <DeleteBtn/>
+                    <button className="btn btn-sm btn-secondary py-2 px-3 my-2 mx-2">Details</button>
                 </div>
             </div>
             </div>

@@ -12,7 +12,7 @@ export const StoreContextProvider = (props) => {
             { 
                 id: prevProjects.length + 1,  // Temporary ID generation
                 ...newProject,
-                status: 'Started' // Default or derived status
+                status: 'open' // Default or derived status
             }
         ]);
     };

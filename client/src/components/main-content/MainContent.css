@@ -41,6 +41,9 @@
 .status.completed { color: green; }
 .status.pending { color: tomato; }
 .status.started { color: rgb(241, 180, 65); }
+.status.open {
+    color: #32CD32;
+}
 
 .empty-project-list {
     min-height: 200px;
@@ -156,4 +159,43 @@
     margin: 5px 0;
     color: #555;
   }
+
+/* Projectlist */
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: left;
+    margin-top: 10px;
+}
+
+.project-actions button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 768px){
+    .project-actions {
+        flex-direction: row;
+        align-items: left;
+    }
+
+    .project-actions button {
+        font-size: 12px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-actions {
+        gap: 8px;
+    }
+
+    .project-actions button {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
   
