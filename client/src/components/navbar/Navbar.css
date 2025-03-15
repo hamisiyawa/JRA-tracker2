@@ -6,3 +6,70 @@
   .profileDropdown:hover{
   cursor: pointer !important;
   }
+
+.user-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-label {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.switch-container {
+  width: 50px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.switch-toggle {
+  width: 22px;
+  height: 17px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  transition: left 0.3s;
+}
+
+.switch-container.active {
+  background-color: #007bff;
+}
+
+.switch-container.active .switch-toggle {
+  left: 25px;
+}
+
+@media (max-width: 768px) {
+  .user-switch {
+      gap: 5px;
+  }
+
+  .toggle-label {
+      font-size: 12px;
+  }
+
+  .switch-container {
+      width: 40px;
+      height: 20px;
+  }
+
+  .switch-toggle {
+      width: 18px;
+      height: 18px;
+      left: 2px;
+  }
+
+  .switch-container.active .switch-toggle {
+      left: 20px;
+  }
+}

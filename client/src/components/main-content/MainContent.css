@@ -176,6 +176,41 @@
     transition: 0.3s ease;
 }
 
+.btn-icon {
+    background: none;
+    border: none;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.file-icon.delete{
+    color: #d33;
+    font-size: 18px;
+}
+
+
+.file-icon.delete:hover {
+    color: #a00;
+}
+
+.file-icon.update{
+    color: blue;
+    font-size: 18px;
+}
+
+.file-icon.update:hover{
+    color: darkblue;
+}
+
+.file-icon.details{
+    color: #666;
+    font-size: 18px;
+}
+
 @media (max-width: 768px){
     .project-actions {
         flex-direction: row;

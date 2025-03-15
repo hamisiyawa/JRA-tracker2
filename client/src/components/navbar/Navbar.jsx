@@ -17,6 +17,11 @@ const Navbar = () => {
 
         fetchUserData();
     }, []); // Runs once on component mount
+
+    // Function to toggle user type
+    const toggleUserType = () => {
+        setUserType((prevType) => (prevType === "Client" ? "Worker" : "Client"));
+    };
   return (
     <div>
         <nav class="navbar navbar-dark p-2">
@@ -24,6 +29,18 @@ const Navbar = () => {
                 <a className="navbar-brand" href="index.html">
                     JRA <span className="user-type">{userType}</span>
                 </a>
+
+                {/* User Type Toggle Switch */}
+                <div className="user-switch">
+                    <span className="toggle-label">Client</span>
+                    <div 
+                        className={`switch-container ${userType === "Worker" ? "active" : ""}`} 
+                        onClick={toggleUserType}
+                    >
+                        <div className="switch-toggle" />
+                    </div>
+                    <span className="toggle-label">Worker</span>
+                </div>
 
                 <div className="dropdown profileDropdown pt-3">
                     <p className="text-light dropdown-toggle"  id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">

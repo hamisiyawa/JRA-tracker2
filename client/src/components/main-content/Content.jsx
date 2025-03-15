@@ -5,6 +5,7 @@ import SearchBtn from './SearchBtn'
 import FilterBtn from './FilterBtn'
 import ProjectsList from './ProjectsList'
 import TermsAndConditions from './TermsAndConditions'
+import Dashboard from '../dashboard/Dashboard'
 
 const Content = () => {
     const [filterStatus, setFilterStatus] = useState('All');
@@ -22,13 +23,13 @@ const Content = () => {
     <div className='container my-4 content'>
         <ul className="nav nav-tabs" id="dashboardTabs">
             <li className="nav-item">
-                <a className="nav-link active" data-bs-toggle="tab" href="#projects">My Projects</a>
+                <a className="nav-link active" data-bs-toggle="tab" href="#projects">Projects</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" data-bs-toggle="tab" href="#messages">Dashboard</a>
+                <a className="nav-link" data-bs-toggle="tab" href="#dashboard">Dashboard</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" data-bs-toggle="tab" href="#feedback">Profile</a>
+                <a className="nav-link" data-bs-toggle="tab" href="#profile">Profile</a>
             </li>
             <li className="nav-item">
                 <a className="nav-link" data-bs-toggle="tab" href="#terms">terms of service</a>
@@ -58,13 +59,14 @@ const Content = () => {
             
 
             {/* <!-- Messages Section --> */}
-            <div className="tab-pane fade" id="messages">
-                <h2>Manage Projects</h2>
+            <div className="tab-pane fade" id="dashboard">
+                
+                <Dashboard />
                
             </div>
 
             {/* -- Notifications Section  */}
-            <div className="tab-pane fade" id="feedback">
+            <div className="tab-pane fade" id="profile">
                 <h2>My Profile Settings</h2>
               
             </div>
