@@ -1,0 +1,178 @@
+.container.projectDetails {
+    display: flex;
+    justify-content: center;
+    min-height: 70vh;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.details-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+.card{
+    background: white;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    width: 100%;
+    max-height: fit-content;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-details {
+    flex: 1;
+}
+
+.card-details h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-details p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.card-details .status{
+    padding: 8px 15px;
+}
+
+
+/* File Attachment Section */
+.file-section {
+    margin: 15px 0;
+}
+
+.file-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333 !important;
+    transition: color 0.3s ease;
+}
+
+.file-link:hover {
+    color: var(--color-accent) !important;
+}
+
+/* File Icons */
+.file-icon {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.word {
+    color: #2b579a !important; /* Word Blue */
+}
+
+.pdf {
+    color: #d32f2f !important; /* PDF Red */
+}
+
+.excel {
+    color: #217346 !important; /* Excel Green */
+}
+
+/* Budget Section */
+.budget-section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.budget-badge {
+    display: inline-block;
+    background: #28a745; /* Green color for financial details */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+    text-align: center;
+    margin-top: 5px;
+}
+
+.bid-card {
+    flex: 1;
+    text-align: left;
+}
+
+/* Form Styling */
+.bid-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.bid-card label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.bid-card input, 
+.bid-card textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px){
+    .details-container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        gap: 15px;
+    }
+
+    .card-details h2 {
+        font-size: 20px;
+    }
+
+    .file-link {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        padding: 15px;
+    }
+
+    .card-details h2 {
+        font-size: 18px;
+    }
+
+    .budget-badge {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .bid-card label {
+        font-size: 14px;
+    }
+
+    .bid-card input, 
+    .bid-card textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .btn-bid {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

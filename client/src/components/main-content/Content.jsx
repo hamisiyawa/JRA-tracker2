@@ -6,6 +6,7 @@ import FilterBtn from './FilterBtn'
 import ProjectsList from './ProjectsList'
 import TermsAndConditions from './TermsAndConditions'
 import Dashboard from '../dashboard/Dashboard'
+import Details from '../../pages/project-details/Details'
 
 const Content = () => {
     const [filterStatus, setFilterStatus] = useState('All');

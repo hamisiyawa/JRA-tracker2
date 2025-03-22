@@ -26,7 +26,7 @@ const ProjectsList = ({ filterStatus, searchTerm }) => {
                 <div className="project-actions">
                     <UpdateBtn/>
                     <DeleteBtn/>
-                    <DetailsBtn/>
+                    <DetailsBtn  projectId={project.id} />
                 </div>
             </div>
             </div>
